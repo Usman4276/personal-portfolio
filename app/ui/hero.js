@@ -7,13 +7,13 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div className="h-dvh bg-[#f5df4e] flex flex-col justify-between items-center">
-      <div className="flex justify-center w-full h-dvh items-center animate-fade">
-        <div className="flex flex-col gap-6 w-full px-16">
+      <div className="flex justify-center gap-2 w-full h-dvh items-center animate-fade">
+        <div className="flex flex-col items-center md:items-start gap-6 w-full p-4 md:pl-16">
           {/* Heading text */}
           <div>
-            <p className="text-5xl">GET A</p>
+            <p className="lg:text-5xl md:text-4xl text-2xl">GET A</p>
           </div>
-          <div className="font-bold text-8xl">
+          <div className="font-bold text-center md:text-start lg:text-8xl md:text-7xl text-5xl">
             <Typewriter
               options={{
                 strings: ["WEBSITE", "MOBILE APP", "UI/UX"],
@@ -23,11 +23,11 @@ const Hero = () => {
             />
           </div>
           <div>
-            <p className="text-3xl">FOR YOUR BUSINESS</p>
+            <p className="lg:text-3xl md:text-2xl text-lg">FOR YOUR BUSINESS</p>
           </div>
 
           {/* Buttons */}
-          <div className="mt-6 flex gap-4">
+          <div className="mt-6 flex justify-center gap-4 flex-wrap ">
             <Button
               textColor={"white"}
               bg={"black"}
@@ -45,7 +45,7 @@ const Hero = () => {
         </div>
 
         {/* Image */}
-        <div className="w-full">
+        <div className="w-4/5 hidden md:block md:pr-16">
           <Image
             src="/profile.jpg"
             className="border-[1rem] border-white border-solid rounded-full"

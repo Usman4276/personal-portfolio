@@ -21,6 +21,7 @@ const Navbar = () => {
         size={"sm"}
         variant={"primary"}
         onClick={onOpen}
+        _active={{ border: 0 }}
       />
 
       {/* Modal component */}

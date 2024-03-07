@@ -1,4 +1,4 @@
-import { Inter, Poppins, Lato } from "next/font/google";
+import { Lato } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./provider";
 
