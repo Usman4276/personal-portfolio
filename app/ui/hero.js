@@ -47,6 +47,7 @@ const Hero = () => {
         {/* Image */}
         <div className="w-4/5 hidden md:block md:pr-16">
           <Image
+            priority
             src="/profile.jpg"
             className="border-[1rem] border-white border-solid rounded-full"
             width={500}

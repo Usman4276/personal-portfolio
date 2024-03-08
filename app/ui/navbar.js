@@ -9,7 +9,7 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <div className="flex justify-between items-center py-4 px-16 absolute z-10 w-full top-0">
+    <div className="flex justify-between items-center py-4 px-5 md:px-16 absolute z-10 w-full top-0">
       {/* Logo */}
       <div className="font-bold text-2xl animate-fade">LOGO</div>
 

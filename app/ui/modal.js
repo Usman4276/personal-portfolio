@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Modal,
   ModalOverlay,
@@ -6,9 +6,13 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
+import { Context } from "@/app/provider";
 
 const ModalComp = ({ ...rest }) => {
+  const { setState } = useContext(Context);
+
   const links = ["services", "projects", "about", "contact"];
+
   return (
     <>
       <Modal isCentered isOpen={rest.isOpen} onClose={rest.onClose}>
@@ -21,7 +25,11 @@ const ModalComp = ({ ...rest }) => {
               return (
                 <div
                   key={index}
-                  className="capitalize text-center m-4 cursor-pointer text-xl hover:text-[#f5df4e] font-semibold animate-jump"
+                  className="font-inherit animate-jump capitalize text-center m-4 cursor-pointer text-xl hover:bg-[#f5df4e] rounded-full transition ease-in delay-50"
+                  onClick={() => {
+                    setState(link);
+                    rest.onClose();
+                  }}
                 >
                   {link}
                 </div>

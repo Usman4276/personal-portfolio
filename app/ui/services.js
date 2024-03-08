@@ -1,28 +1,64 @@
-import React from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { Card, CardHeader, CardBody, Text, Heading } from "@chakra-ui/react";
 import Image from "next/image";
+import { Context } from "@/app/provider";
 
 const Services = () => {
+  const { state, setState } = useContext(Context);
+  const servicesRef = useRef(null);
+
   const cards = [
     {
+      id: 1,
       title: "Website Development",
-      body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eaque esse, autem deserunt repudiandae iste quia sit reiciendis ullam facilis modi sequi rerum voluptas placeat aliquam amet velit unde corporis?",
+      body: "We will provide you exceptional web development services, which will help you to transform your business to fit in with the cross-platform reality.",
       img: "/web.jpg",
     },
     {
+      id: 2,
       title: "Mobile App Development",
-      body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eaque esse, autem deserunt repudiandae iste quia sit reiciendis ullam facilis modi sequi rerum voluptas placeat aliquam amet velit unde corporis?",
+      body: "Mobile app are the need of every business in this era. We offer winning app strategies, stunning app designs, powerful agile app development, and stand-out launch marketing.",
       img: "/mobile.jpeg",
     },
     {
+      id: 3,
       title: "UI/UX Designing",
-      body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eaque esse, autem deserunt repudiandae iste quia sit reiciendis ullam facilis modi sequi rerum voluptas placeat aliquam amet velit unde corporis?",
+      body: "We design world-class digital experiences that meet your branding requirements and help your business to remain one step ahead in the digital world.",
       img: "/uiux.jpeg",
+    },
+    {
+      id: 4,
+      title: "Server Management",
+      body: "We streamline server management, offering peak performance, security. We will handle maintenance and monitoring, so you can focus on your business.",
+      img: "/server.jpg",
+    },
+    {
+      id: 5,
+      title: "Amazon Web Services",
+      body: "Experience cloud excellence with our AWS mastery—seamless performance, scalability, and robust security. Elevate your success in the digital era with us",
+      img: "/cloud.jpg",
+    },
+    {
+      id: 6,
+      title: "Desktop App Development",
+      body: "Empower your business with our expert desktop app development team. We blend innovation and functionality, delivering tailored solutions with cutting-edge technologies.",
+      img: "/desktop.jpeg",
     },
   ];
 
+  useEffect(() => {
+    if (state === "services") {
+      setTimeout(() => {
+        servicesRef.current.scrollIntoView({
+          behavior: "smooth",
+        });
+        setState("");
+      }, 100);
+    }
+  }, [state]);
+
   return (
-    <div className="px-16 mt-28 mb-10">
+    <div ref={servicesRef} className="px-3 sm:px-16 mt-28 mb-10 animate-fade">
       {/* Heading */}
       <div className="text-center">
         <Heading
@@ -35,20 +71,18 @@ const Services = () => {
       </div>
 
       {/* Cards */}
-      <div className="text-center flex flex-wrap justify-center gap-4 mt-20">
-        {cards.map((val, index) => {
+      <div className="text-center flex flex-wrap justify-center gap-6 mt-20">
+        {cards.map((val) => {
           return (
-            <>
-              <Card maxW="sm" className="animate-fade" key={index}>
-                <CardBody className="flex flex-col items-center justify-center">
-                  <Image src={val.img} width={200} height={200} alt="web_img" />
-                  <CardHeader>
-                    <Heading size="md">{val.title}</Heading>
-                  </CardHeader>
-                  <Text fontSize={"md"}>{val.body}</Text>
-                </CardBody>
-              </Card>
-            </>
+            <Card key={val.id} maxW="sm" className="animate-fade">
+              <CardBody className="flex flex-col items-center justify-center">
+                <Image src={val.img} width={200} height={200} alt="img" />
+                <CardHeader>
+                  <Heading size="md">{val.title}</Heading>
+                </CardHeader>
+                <Text fontSize={"md"}>{val.body}</Text>
+              </CardBody>
+            </Card>
           );
         })}
       </div>
