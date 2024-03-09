@@ -11,7 +11,7 @@ import { Context } from "@/app/provider";
 const ModalComp = ({ ...rest }) => {
   const { setState } = useContext(Context);
 
-  const links = ["services", "projects", "about", "contact"];
+  const links = ["services", "projects", "about", "feedback", "contact"];
 
   return (
     <>
