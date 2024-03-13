@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { TbWorldWww } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
-import { projectList } from "@/app/lib/placeholder-data";
+import { projectList } from "../lib/placeholder-data";
 
 const Projects = () => {
   const { contextState, setContextState } = useContext(Context);
