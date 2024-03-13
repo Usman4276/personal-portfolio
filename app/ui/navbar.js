@@ -4,14 +4,17 @@ import React from "react";
 import ModalComp from "@/app/ui/modal";
 import { useDisclosure, IconButton } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import Link from "next/link";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <div className="flex justify-between items-center py-4 px-5 md:px-16 absolute z-10 w-full top-0">
+    <div className="flex justify-between items-center py-4 px-5 md:px-16 sticky z-10 w-full top-0 bg-[#f5df4e]">
       {/* Logo */}
-      <div className="font-bold text-2xl animate-fade">LOGO</div>
+      <Link href={"/"} className="font-bold text-2xl animate-fade">
+        LOGO
+      </Link>
 
       {/* Icon button to trigger modal*/}
       <IconButton

@@ -7,11 +7,13 @@ import {
   ModalCloseButton,
 } from "@chakra-ui/react";
 import { Context } from "@/app/provider";
+import Link from "next/link";
 
 const ModalComp = ({ ...rest }) => {
-  const { setState } = useContext(Context);
+  const { contextState, setContextState } = useContext(Context);
 
-  const links = ["services", "projects", "about", "feedback", "contact"];
+  let links = ["services", "projects", "about", "feedback", "contact"];
+  if (contextState === "allPages") links = ["/"];
 
   return (
     <>
@@ -21,13 +23,25 @@ const ModalComp = ({ ...rest }) => {
           <ModalCloseButton />
           <ModalBody>
             {/* Iterating links */}
+
             {links.map((link, index) => {
-              return (
+              return contextState === "allPages" ? (
                 <div
                   key={index}
                   className="font-inherit animate-jump capitalize text-center m-4 cursor-pointer text-xl hover:bg-[#f5df4e] rounded-full transition ease-in delay-50"
                   onClick={() => {
-                    setState(link);
+                    setContextState("");
+                    rest.onClose();
+                  }}
+                >
+                  <Link href={link}>Home</Link>
+                </div>
+              ) : (
+                <div
+                  key={index}
+                  className="font-inherit animate-jump capitalize text-center m-4 cursor-pointer text-xl hover:bg-[#f5df4e] rounded-full transition ease-in delay-50"
+                  onClick={() => {
+                    setContextState(link);
                     rest.onClose();
                   }}
                 >

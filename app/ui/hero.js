@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="h-dvh bg-[#f5df4e] flex flex-col justify-between items-center">
+    <div className="h-[92vh] bg-[#f5df4e] flex flex-col justify-between items-center">
       <div className="flex justify-center gap-2 w-full h-dvh items-center animate-fade">
         <div className="flex flex-col items-center md:items-start gap-6 w-full p-4 md:pl-16">
           {/* Heading text */}

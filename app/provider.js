@@ -8,11 +8,11 @@ import { createContext, useState } from "react";
 export const Context = createContext();
 
 export function Providers({ children }) {
-  const [state, setState] = useState("");
+  const [contextState, setContextState] = useState("");
 
   return (
     <ChakraProvider>
-      <Context.Provider value={{ state, setState }}>
+      <Context.Provider value={{ contextState, setContextState }}>
         {children}
       </Context.Provider>
     </ChakraProvider>
