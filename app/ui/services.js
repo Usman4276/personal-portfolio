@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Context } from "@/app/provider";
 
 const Services = () => {
-  const { contextState, setContextState } = useContext(Context);
+  const { state, setContextState } = useContext(Context);
   const servicesRef = useRef(null);
 
   const cards = [
@@ -47,7 +47,7 @@ const Services = () => {
   ];
 
   useEffect(() => {
-    if (contextState === "services") {
+    if (state === "services") {
       setTimeout(() => {
         servicesRef.current.scrollIntoView({
           behavior: "smooth",
@@ -55,10 +55,10 @@ const Services = () => {
         setContextState("");
       }, 100);
     }
-  }, [contextState]);
+  }, [state]);
 
   return (
-    <div ref={servicesRef} className="px-3 sm:px-16 mt-28 mb-10 animate-fade">
+    <div ref={servicesRef} className="px-3 sm:px-16 mt-28 animate-fade">
       {/* Heading */}
       <div className="text-center">
         <Heading

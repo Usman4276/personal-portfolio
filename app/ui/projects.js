@@ -5,69 +5,13 @@ import { Heading, Text, Button } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { TbWorldWww } from "react-icons/tb";
-import { FaGithub, FaReact, FaNode } from "react-icons/fa";
-import { SiExpress, SiTypescript } from "react-icons/si";
-import { DiMongodb } from "react-icons/di";
+import { FaGithub } from "react-icons/fa";
+import { projectList } from "@/app/lib/placeholder-data";
 
 const Projects = () => {
   const { contextState, setContextState } = useContext(Context);
   const projectsRef = useRef(null);
 
-  // Dummy data
-  const projectList = [
-    {
-      id: 1,
-      title: "Project 1",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eos modi ullam illo id rem beatae accusamus, reprehenderit alias quo similique, culpa libero eligendi? Laborum hic tempora libero veniam possimus.",
-      img: "/p1.jpg",
-      tools: [
-        <FaReact size={30} />,
-        <FaNode size={30} />,
-        <SiExpress size={30} />,
-        <DiMongodb size={30} />,
-        <SiTypescript size={30} />,
-      ],
-    },
-    {
-      id: 2,
-      title: "Project 2",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eos modi ullam illo id rem beatae accusamus, reprehenderit alias quo similique, culpa libero eligendi? Laborum hic tempora libero veniam possimus.",
-      img: "/p2.jpg",
-      tools: [
-        <FaReact size={30} />,
-        <FaNode size={30} />,
-        <SiExpress size={30} />,
-        <DiMongodb size={30} />,
-        <SiTypescript size={30} />,
-      ],
-    },
-    {
-      id: 3,
-      title: "Project 3",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eos modi ullam illo id rem beatae accusamus, reprehenderit alias quo similique, culpa libero eligendi? Laborum hic tempora libero veniam possimus.",
-      img: "/p3.jpg",
-      tools: [
-        <FaReact size={30} />,
-        <FaNode size={30} />,
-        <SiExpress size={30} />,
-        <DiMongodb size={30} />,
-        <SiTypescript size={30} />,
-      ],
-    },
-    {
-      id: 4,
-      title: "Project 4",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eos modi ullam illo id rem beatae accusamus, reprehenderit alias quo similique, culpa libero eligendi? Laborum hic tempora libero veniam possimus.",
-      img: "/p4.jpg",
-      tools: [
-        <FaReact size={30} />,
-        <FaNode size={30} />,
-        <SiExpress size={30} />,
-        <DiMongodb size={30} />,
-        <SiTypescript size={30} />,
-      ],
-    },
-  ];
   useEffect(() => {
     if (contextState === "projects") {
       setTimeout(() => {

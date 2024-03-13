@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import Typewriter from "typewriter-effect";
 import { Button } from "@chakra-ui/react";
 import Image from "next/image";
+import { Context } from "@/app/provider";
 
 const Hero = () => {
+  const { setContextState } = useContext(Context);
+
   return (
     <div className="h-[92vh] bg-[#f5df4e] flex flex-col justify-between items-center">
       <div className="flex justify-center gap-2 w-full h-dvh items-center animate-fade">
@@ -34,6 +37,9 @@ const Hero = () => {
               _hover={{ bg: "rgb(0, 0, 0, 0.80)" }}
               size={"lg"}
               _active={{ border: 0 }}
+              onClick={() => {
+                setContextState("projects");
+              }}
             >
               View My Work
             </Button>
