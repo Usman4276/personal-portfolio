@@ -1,6 +1,7 @@
 import { Lato } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./provider";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const lato = Lato({ subsets: ["latin"], weight: "400" });
 
