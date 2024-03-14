@@ -20,7 +20,7 @@ const ModalComp = ({ ...rest }) => {
       <Modal isCentered isOpen={rest.isOpen} onClose={rest.onClose}>
         <ModalOverlay bg="blackAlpha.300" backdropFilter="blur(10px)" />
         <ModalContent>
-          <ModalCloseButton />
+          <ModalCloseButton _active={{ border: 0 }} />
           <ModalBody>
             {/* Iterating links */}
 

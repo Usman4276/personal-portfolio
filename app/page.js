@@ -6,6 +6,7 @@ import Services from "./ui/services";
 import Projects from "./ui/projects";
 import About from "./ui/about";
 import Feedback from "./ui/feedback";
+import Contact from "./ui/contact";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Projects />
       <About />
       <Feedback />
+      <Contact />
     </>
   );
 }
