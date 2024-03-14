@@ -44,7 +44,14 @@ const Hero = () => {
               View My Work
             </Button>
 
-            <Button colorScheme={"gray"} size={"lg"} _active={{ border: 0 }}>
+            <Button
+              colorScheme={"gray"}
+              size={"lg"}
+              _active={{ border: 0 }}
+              onClick={() => {
+                setContextState("contact");
+              }}
+            >
               Contact Me
             </Button>
           </div>
