@@ -58,7 +58,7 @@ const Services = () => {
   }, [state]);
 
   return (
-    <div ref={servicesRef} className="px-3 sm:px-16 mt-28 animate-fade">
+    <div ref={servicesRef} className="mt-28 animate-fade">
       {/* Heading */}
       <div className="text-center">
         <Heading
@@ -66,25 +66,27 @@ const Services = () => {
           size={"lg"}
           className="border-b-4 border-[#f5df4e] inline-block"
         >
-          Our Services
+          Services
         </Heading>
       </div>
 
       {/* Cards */}
-      <div className="text-center flex flex-wrap justify-center gap-6 mt-20">
-        {cards.map((val) => {
-          return (
-            <Card key={val.id} maxW="sm" className="animate-fade">
-              <CardBody className="flex flex-col items-center justify-center">
-                <Image src={val.img} width={200} height={200} alt="img" />
-                <CardHeader>
-                  <Heading size="md">{val.title}</Heading>
-                </CardHeader>
-                <Text fontSize={"md"}>{val.body}</Text>
-              </CardBody>
-            </Card>
-          );
-        })}
+      <div className="flex justify-center">
+        <div className="text-center flex flex-wrap justify-center gap-6 mt-20 max-w-[1320px]">
+          {cards.map((val) => {
+            return (
+              <Card key={val.id} maxW="sm" className="animate-fade">
+                <CardBody className="flex flex-col items-center justify-center">
+                  <Image src={val.img} width={200} height={200} alt="img" />
+                  <CardHeader>
+                    <Heading size="md">{val.title}</Heading>
+                  </CardHeader>
+                  <Text fontSize={"md"}>{val.body}</Text>
+                </CardBody>
+              </Card>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

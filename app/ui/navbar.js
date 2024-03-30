@@ -10,25 +10,27 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <div className="flex justify-between items-center py-4 px-5 md:px-16 sticky z-10 w-full top-0 bg-[#f5df4e]">
-      {/* Logo */}
-      <Link href={"/"} className="font-bold text-2xl animate-fade">
-        LOGO
-      </Link>
+    <div className="flex justify-center sticky z-10 top-0 bg-[#f5df4e] w-full py-4">
+      <div className="flex justify-between items-center px-5 w-full max-w-[1320px]">
+        {/* Logo */}
+        <Link href={"/"} className="font-bold text-3xl animate-fade">
+          LOGO
+        </Link>
 
-      {/* Icon button to trigger modal*/}
-      <IconButton
-        className="animate-fade"
-        aria-label="NavLinks"
-        icon={<HamburgerIcon boxSize={7} />}
-        size={"sm"}
-        variant={"primary"}
-        onClick={onOpen}
-        _active={{ border: 0 }}
-      />
+        {/* Icon button to trigger modal*/}
+        <IconButton
+          className="animate-fade"
+          aria-label="NavLinks"
+          icon={<HamburgerIcon boxSize={7} />}
+          size={"lg"}
+          variant={"primary"}
+          onClick={onOpen}
+          _active={{ border: 0 }}
+        />
 
-      {/* Modal component */}
-      <ModalComp isOpen={isOpen} onClose={onClose} />
+        {/* Modal component */}
+        <ModalComp isOpen={isOpen} onClose={onClose} />
+      </div>
     </div>
   );
 };
