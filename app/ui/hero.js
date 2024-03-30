@@ -71,7 +71,7 @@ const Hero = () => {
       </div>
 
       {/* Down arrow animation */}
-      <div className="flex justify-center border animate-fade">
+      <div className="flex justify-center animate-fade mb-28">
         <ArrowDownIcon
           boxSize={8}
           className="animate-fade-down animate-infinite animate-duration-[1800ms] animate-ease-linear"
