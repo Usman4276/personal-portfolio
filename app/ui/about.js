@@ -51,7 +51,7 @@ const About = () => {
             />
           </div>
           <div className="w-[68%] max-[1309px]:w-full text-justify px-20 max-[834px]:px-4">
-            <Text fontSize={"2xl"} color="white">
+            <Text fontSize={"xl"} color="white">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
               sequi recusandae libero culpa, neque dignissimos accusantium
               voluptatem dolorum voluptatibus nulla fugiat odio modi eos earum!

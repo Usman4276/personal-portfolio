@@ -12,6 +12,7 @@ const Projects = () => {
   const { contextState, setContextState } = useContext(Context);
   const projectsRef = useRef(null);
 
+  // Setting up counter viewport references
   useCountUp({
     ref: "counter1",
     end: 50,
@@ -38,6 +39,7 @@ const Projects = () => {
       }, 100);
     }
   }, [contextState]);
+
   return (
     <div ref={projectsRef} className="animate-fade">
       {/* Counter */}

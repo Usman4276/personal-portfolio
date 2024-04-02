@@ -66,35 +66,43 @@ const Feedback = () => {
         </div>
 
         {/* Carousel */}
-        <Carousel
-          showThumbs={false}
-          autoPlay={true}
-          infiniteLoop={true}
-          showStatus={false}
-          showIndicators={false}
-          showArrows={false}
-          className="animate-fade"
+        <div
+          data-aos="zoom-out"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+          data-aos-duration="600"
+          // data-aos-offset="300"
         >
-          {carouselData.map((val) => {
-            return (
-              <div
-                key={val.id}
-                className="flex flex-col justify-center items-center py-10 mt-14 gap-2"
-              >
-                <Avatar name="Dan Abrahmov" src={val.avatar} size={"xl"} />
-                <Heading as={"h4"} size={"md"} className="mt-4">
-                  {val.name}
-                </Heading>
-                <Text
-                  fontSize={"md"}
-                  className="w-full sm:w-1/2 text-justify px-4 sm:px-0"
+          <Carousel
+            showThumbs={false}
+            autoPlay={true}
+            infiniteLoop={true}
+            showStatus={false}
+            showIndicators={false}
+            showArrows={false}
+            className="animate-fade"
+          >
+            {carouselData.map((val) => {
+              return (
+                <div
+                  key={val.id}
+                  className="flex flex-col justify-center items-center py-10 mt-14 gap-2"
                 >
-                  {val.comment}
-                </Text>
-              </div>
-            );
-          })}
-        </Carousel>
+                  <Avatar name="Dan Abrahmov" src={val.avatar} size={"xl"} />
+                  <Heading as={"h4"} size={"md"} className="mt-4">
+                    {val.name}
+                  </Heading>
+                  <Text
+                    fontSize={"md"}
+                    className="w-full sm:w-1/2 text-justify px-4 sm:px-0"
+                  >
+                    {val.comment}
+                  </Text>
+                </div>
+              );
+            })}
+          </Carousel>
+        </div>
       </div>
     </>
   );
