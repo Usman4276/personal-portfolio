@@ -67,11 +67,10 @@ const Feedback = () => {
 
         {/* Carousel */}
         <div
-          data-aos="zoom-out"
+          data-aos="fade-up"
           data-aos-easing="ease-in-out"
           data-aos-once="false"
           data-aos-duration="600"
-          // data-aos-offset="300"
         >
           <Carousel
             showThumbs={false}

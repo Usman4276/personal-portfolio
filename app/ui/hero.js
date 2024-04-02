@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div className="h-screen bg-[#f5df4e] flex flex-col justify-between items-center">
       <div className="w-full max-w-[1320px] flex justify-center gap-2 w-full h-dvh items-center animate-fade">
-        <div className="animate-fade-up flex flex-col items-center md:items-start gap-6 w-full pl-5">
+        <div className="animate-fade-up flex flex-col items-center md:items-start gap-6 w-full px-5">
           {/* Heading text */}
           <div>
             <p className="lg:text-5xl text-4xl">GET A</p>
@@ -30,7 +30,7 @@ const Hero = () => {
           </div>
 
           {/* Buttons */}
-          <div className="mt-6 flex justify-center gap-4 flex-wrap ">
+          <div className="mt-6 flex justify-center gap-4 flex-wrap">
             <Button
               textColor={"white"}
               bg={"black"}
