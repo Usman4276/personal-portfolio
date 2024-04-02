@@ -40,7 +40,13 @@ const Contact = () => {
       </div>
 
       <div className="border bg-[#f5df4e] flex justify-center items-center mt-14">
-        <div className="w-1/2 max-[768px]:w-full p-10">
+        <div
+          className="w-1/2 max-[768px]:w-full p-10"
+          data-aos="fade-right"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+          data-aos-duration="600"
+        >
           <FormControl>
             <FormLabel>What is Your Name:</FormLabel>
             <Input type="text" variant={"flushed"} />
