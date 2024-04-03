@@ -1,8 +1,11 @@
 import React, { useContext, useEffect, useRef } from "react";
+import { Poppins } from "next/font/google";
 import { Card, CardHeader, CardBody, Text, Heading } from "@chakra-ui/react";
 import Image from "next/image";
 import { Context } from "@/app/provider";
 import { cards } from "../utils/constants";
+
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 const Services = () => {
   const { contextState, setContextState } = useContext(Context);
@@ -26,7 +29,7 @@ const Services = () => {
         <Heading
           as={"h4"}
           size={"lg"}
-          className="border-b-4 border-[#f5df4e] inline-block"
+          className="border-b-4 border-[#f5df4e] inline-block !font-medium"
         >
           Services
         </Heading>
@@ -50,7 +53,9 @@ const Services = () => {
                   <CardHeader>
                     <Heading size="md">{val.title}</Heading>
                   </CardHeader>
-                  <Text fontSize={"md"}>{val.body}</Text>
+                  <Text fontSize={"md"} className="text-justify">
+                    {val.body}
+                  </Text>
                 </CardBody>
               </Card>
             );

@@ -25,7 +25,7 @@ const About = () => {
         <Heading
           as={"h4"}
           size={"lg"}
-          className="border-b-4 border-[#f5df4e] inline-block"
+          className="border-b-4 border-[#f5df4e] inline-block !font-medium"
         >
           Know Me More
         </Heading>

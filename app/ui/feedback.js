@@ -59,7 +59,7 @@ const Feedback = () => {
           <Heading
             as={"h4"}
             size={"lg"}
-            className="border-b-4 border-[#f5df4e] inline-block"
+            className="border-b-4 border-[#f5df4e] inline-block !font-medium"
           >
             What Client Say
           </Heading>
@@ -88,12 +88,12 @@ const Feedback = () => {
                   className="flex flex-col justify-center items-center py-10 mt-14 gap-2"
                 >
                   <Avatar name="Dan Abrahmov" src={val.avatar} size={"xl"} />
-                  <Heading as={"h4"} size={"md"} className="mt-4">
+                  <Heading as={"h4"} size={"md"} className="mt-2">
                     {val.name}
                   </Heading>
                   <Text
                     fontSize={"md"}
-                    className="w-full sm:w-1/2 text-justify px-4 sm:px-0"
+                    className="w-full sm:w-1/2 text-justify px-4 sm:px-0 mt-4"
                   >
                     {val.comment}
                   </Text>

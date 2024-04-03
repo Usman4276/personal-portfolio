@@ -6,7 +6,7 @@ import { FaReact, FaNode } from "react-icons/fa";
 export const projectList = [
   {
     id: 1,
-    title: "Project 1",
+    title: "Cattle Shop",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eos modi ullam illo id rem beatae accusamus, reprehenderit alias quo similique, culpa libero eligendi? Laborum hic tempora libero veniam possimus.",
     img: "/p1.jpg",
     tools: [
