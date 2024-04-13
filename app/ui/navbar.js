@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import { Zeyada } from "next/font/google";
+import { Poppins } from "next/font/google";
 import ModalComp from "@/app/ui/modal";
 import { useDisclosure, IconButton } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 
-const zeyada = Zeyada({ subsets: ["latin"], weight: "400" });
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -18,9 +18,9 @@ const Navbar = () => {
         {/* Logo */}
         <Link
           href={"/"}
-          className={`${zeyada.className} text-4xl animate-fade font-bold`}
+          className={`${poppins.className} text-4xl animate-fade font-bold`}
         >
-          USMAN
+          USM
         </Link>
 
         {/* Icon button to trigger modal*/}

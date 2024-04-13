@@ -61,10 +61,10 @@ const Hero = () => {
         <div className="w-4/5 hidden md:block pr-5 animate-jump-in">
           <Image
             priority
-            src="/profile.jpg"
+            src="/hero.jpg"
             className="border-[1rem] border-white border-solid rounded-full"
             width={500}
-            height={500}
+            height={400}
             alt="profile picture"
           />
         </div>

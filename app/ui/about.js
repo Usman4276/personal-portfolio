@@ -44,22 +44,23 @@ const About = () => {
             <Image
               priority
               src="/about.jpg"
-              className="rounded-md border-[1rem] border-[#f5df4e] border-solid max-[834px]:w-[100%]"
+              className="rounded-md border-[4px] border-[#f5df4e] border-solid max-[834px]:w-[100%]"
               width={400}
               height={400}
               alt="profile picture"
             />
           </div>
           <div className="w-[68%] max-[1309px]:w-full text-justify px-20 max-[834px]:px-4">
-            <Text fontSize={"xl"} color="white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-              sequi recusandae libero culpa, neque dignissimos accusantium
-              voluptatem dolorum voluptatibus nulla fugiat odio modi eos earum!
-              Soluta voluptatibus debitis modi laboriosam? Laboriosam qui
-              voluptate reiciendis labore facilis quia et. Voluptas nostrum id
-              corporis quam perspiciatis amet maxime aperiam sit officiis
-              doloribus blanditiis magni, voluptatum, architecto laborum veniam
-              laboriosam ipsum. Corporis, hic.
+            <Text fontSize={"2xl"} color="white">
+              👋 Hi, I'm Usman Mustafa, a seasoned full stack developer with 5
+              years of experience. I'm specialized in crafting intuitive user
+              interfaces and robust server-side architectures using JavaScript
+              frameworks like React, Vue, Angular, Node, Express, Nest and
+              Typescript. Proficient in all JavaScript frameworks and libraries,
+              I excel in frontend development while ensuring seamless
+              integration with backend technologies. Experienced in deploying
+              applications using Docker, Kubernetes, and cloud platforms like
+              AWS and Azure. Let's build something great together
             </Text>
           </div>
         </div>
