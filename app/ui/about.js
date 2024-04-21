@@ -34,7 +34,7 @@ const About = () => {
       {/* About Me */}
       <div className="flex justify-center w-full bg-[url('/aboutbg.jpg')] bg-fixed bg-cover mt-20 py-20">
         <div
-          className="max-w-[1320px] flex flex-wrap justify-between items-center max-[834px]:items-start gap-4 animate-fade"
+          className="max-w-[1320px] flex flex-wrap justify-evenly items-center max-[834px]:items-start gap-4 animate-fade"
           data-aos="fade-up"
           data-aos-easing="ease-in-out"
           data-aos-once="false"
@@ -43,24 +43,24 @@ const About = () => {
           <div className="max-[834px]:px-4 max-[1309px]:flex max-[1309px]:justify-center max-[1309px]:w-full">
             <Image
               priority
-              src="/about.jpg"
-              className="rounded-md border-[4px] border-[#f5df4e] border-solid max-[834px]:w-[100%]"
-              width={400}
-              height={400}
+              src="/about.png"
+              className="rounded-md border-[4px] border-[#f5df4e] border-solid max-[834px]:w-[100%] max-w-[300px]"
+              width={300}
+              height={300}
               alt="profile picture"
             />
           </div>
           <div className="w-[68%] max-[1309px]:w-full text-justify px-20 max-[834px]:px-4">
-            <Text fontSize={"2xl"} color="white">
+            <Text color="white" className="text-xl lg:text-2xl">
               👋 Hi, I'm Usman Mustafa, a seasoned full stack developer with 5
               years of experience. I'm specialized in crafting intuitive user
               interfaces and robust server-side architectures using JavaScript
-              frameworks like React, Vue, Angular, Node, Express, Nest and
-              Typescript. Proficient in all JavaScript frameworks and libraries,
-              I excel in frontend development while ensuring seamless
-              integration with backend technologies. Experienced in deploying
-              applications using Docker, Kubernetes, and cloud platforms like
-              AWS and Azure. Let's build something great together
+              libraries & frameworks like React, Vue, Angular, Node, Express,
+              Nest and Typescript. Proficient in all JavaScript frameworks and
+              libraries, I excel in frontend development side while ensuring
+              seamless integration with backend technologies. Experienced in
+              deploying applications using Docker, Kubernetes, and cloud
+              platforms like AWS and Azure. Let's build something great together
             </Text>
           </div>
         </div>

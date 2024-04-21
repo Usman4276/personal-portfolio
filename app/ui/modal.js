@@ -12,7 +12,14 @@ import Link from "next/link";
 const ModalComp = ({ ...rest }) => {
   const { contextState, setContextState } = useContext(Context);
 
-  let links = ["services", "projects", "about", "feedback", "contact"];
+  let links = [
+    "services",
+    "projects",
+    "technologies",
+    "about",
+    "feedback",
+    "contact",
+  ];
   if (contextState === "allPages") links = ["/"];
 
   return (

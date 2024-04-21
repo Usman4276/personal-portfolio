@@ -4,6 +4,7 @@ import Navbar from "@/app/ui/navbar";
 import Hero from "./ui/hero";
 import Services from "./ui/services";
 import Projects from "./ui/projects";
+import Technologies from "./ui/technologies";
 import About from "./ui/about";
 import Feedback from "./ui/feedback";
 import Contact from "./ui/contact";
@@ -24,6 +25,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Projects />
+      <Technologies />
       <About />
       <Feedback />
       <Contact />
