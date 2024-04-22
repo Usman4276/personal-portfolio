@@ -8,7 +8,7 @@ export const projectList = [
     id: 1,
     title: "Project 1",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eos modi ullam illo id rem beatae accusamus, reprehenderit alias quo similique, culpa libero eligendi? Laborum hic tempora libero veniam possimus.",
-    img: "/froxx.png",
+    img: "/p1.jpg",
     tools: [
       <FaReact size={30} />,
       <FaNode size={30} />,
@@ -16,8 +16,8 @@ export const projectList = [
       <DiMongodb size={30} />,
     ],
     animate: "fade-up",
-    url: "#",
-    github: "#",
+    url: "",
+    github: "",
   },
   {
     id: 2,
@@ -32,8 +32,8 @@ export const projectList = [
       <SiTypescript size={30} />,
     ],
     animate: "fade-up",
-    url: "#",
-    github: "#",
+    url: "",
+    github: "",
   },
   {
     id: 3,
@@ -48,8 +48,8 @@ export const projectList = [
       <SiTypescript size={30} />,
     ],
     animate: "fade-up",
-    url: "#",
-    github: "#",
+    url: "",
+    github: "",
   },
   {
     id: 4,
@@ -64,8 +64,8 @@ export const projectList = [
       <SiTypescript size={30} />,
     ],
     animate: "fade-up",
-    url: "#",
-    github: "#",
+    url: "",
+    github: "",
   },
 ];
 
