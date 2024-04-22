@@ -118,19 +118,23 @@ const Projects = () => {
                 />
 
                 <div className="absolute invisible group-hover:visible top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-4">
-                  <Button colorScheme="green" leftIcon={<TbWorldWww />}>
-                    Visit Site
-                  </Button>
-                  <Button
-                    variant={"solid"}
-                    bg={"black"}
-                    _active={{ border: 0 }}
-                    textColor={"white"}
-                    _hover={{ bg: "#1f2937" }}
-                    leftIcon={<FaGithub />}
-                  >
-                    Github
-                  </Button>
+                  <Link href={val.url} target="_blank">
+                    <Button colorScheme="green" leftIcon={<TbWorldWww />}>
+                      Visit Site
+                    </Button>
+                  </Link>
+                  <Link href={val.github} target="_blank">
+                    <Button
+                      variant={"solid"}
+                      bg={"black"}
+                      _active={{ border: 0 }}
+                      textColor={"white"}
+                      _hover={{ bg: "#1f2937" }}
+                      leftIcon={<FaGithub />}
+                    >
+                      Github
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="text-justify w-[68%] max-[1317px]:w-full pl-20 max-[1317px]:pl-0 max-[1317px]:pl-0 py-2 max-[848px]:mt-10">
