@@ -15,17 +15,17 @@ const Projects = () => {
   // Setting up counter viewport references
   useCountUp({
     ref: "counter1",
-    end: 50,
-    enableScrollSpy: true,
-  });
-  useCountUp({
-    ref: "counter2",
     end: 20,
     enableScrollSpy: true,
   });
   useCountUp({
+    ref: "counter2",
+    end: 10,
+    enableScrollSpy: true,
+  });
+  useCountUp({
     ref: "counter3",
-    end: 5,
+    end: 3,
     enableScrollSpy: true,
   });
 

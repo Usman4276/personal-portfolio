@@ -52,15 +52,13 @@ const About = () => {
           </div>
           <div className="w-[68%] max-[1309px]:w-full text-justify px-20 max-[834px]:px-4">
             <Text color="white" className="text-xl lg:text-2xl">
-              👋 Hi, I'm Usman Mustafa, a seasoned full stack developer with 5
-              years of experience. I'm specialized in crafting intuitive user
-              interfaces and robust server-side architectures using JavaScript
-              libraries & frameworks like React, Vue, Angular, Node, Express,
-              Nest and Typescript. Proficient in all JavaScript frameworks and
-              libraries, I excel in frontend development side while ensuring
-              seamless integration with backend technologies. Experienced in
-              deploying applications using Docker, Kubernetes, and cloud
-              platforms like AWS and Azure. Let's build something great together
+              👋 Hi, I'm Usman Mustafa, a full stack developer with 3 + years of
+              professional experience in creating scalable web-applications,
+              cross-platforms mobile apps, desktop apps, deployments and server
+              management. I have worked on many projects from small to
+              enterprise level. If you are in search of some tech solution for
+              your business then you are at right place. Let's build something
+              great together
             </Text>
           </div>
         </div>
