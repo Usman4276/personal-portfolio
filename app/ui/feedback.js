@@ -87,7 +87,7 @@ const Feedback = () => {
                     {val.name}
                   </Heading>
                   <div className="flex justify-center">
-                    <div className="border">
+                    <div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         shapeRendering="geometricPrecision"
