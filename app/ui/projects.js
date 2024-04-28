@@ -158,7 +158,7 @@ const Projects = () => {
         <div className="text-center py-5 mt-20">
           <Link
             href={"/projects"}
-            className="hover:underline hover:text-blue-500"
+            className="hover:underline"
             onClick={() => {
               setContextState("allPages");
             }}
