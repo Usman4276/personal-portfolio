@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setPreloader(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
