@@ -9,8 +9,19 @@ import About from "./ui/about";
 import Feedback from "./ui/feedback";
 import Contact from "./ui/contact";
 import ScrollToTop from "react-scroll-to-top";
+import { useEffect, useState } from "react";
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 export default function Home() {
+  const [preLoader, setPreloader] = useState(true);
+
+  // Running a pre-loader on component mounting
+  useEffect(() => {
+    setTimeout(() => {
+      setPreloader(false);
+    }, 3000);
+  }, []);
+
   return (
     <>
       <ScrollToTop
@@ -21,14 +32,22 @@ export default function Home() {
           textAlign: "-webkit-center",
         }}
       />
-      <Navbar />
-      <Hero />
-      <Services />
-      <Projects />
-      <Technologies />
-      <About />
-      <Feedback />
-      <Contact />
+      {preLoader ? (
+        <div className="bg-[#f5df4e] h-screen flex justify-center items-center animate-fade">
+          <ClimbingBoxLoader color="#020202" size={20} />
+        </div>
+      ) : (
+        <>
+          <Navbar />
+          <Hero />
+          <Services />
+          <Projects />
+          <Technologies />
+          <About />
+          <Feedback />
+          <Contact />
+        </>
+      )}
     </>
   );
 }
