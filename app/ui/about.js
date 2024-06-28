@@ -35,10 +35,10 @@ const About = () => {
       <div className="flex justify-center w-full bg-[url('/aboutbg.jpg')] bg-fixed bg-cover mt-20 py-20">
         <div
           className="max-w-[1320px] flex flex-wrap justify-evenly items-center max-[834px]:items-start gap-4 animate-fade"
-          data-aos="fade-up"
-          data-aos-easing="ease-in-out"
-          data-aos-once="false"
-          data-aos-duration="600"
+          // data-aos="fade-up"
+          // data-aos-easing="ease-in-out"
+          // data-aos-once="false"
+          // data-aos-duration="600"
         >
           <div className="max-[834px]:px-4 max-[1309px]:flex max-[1309px]:justify-center max-[1309px]:w-full">
             <Image

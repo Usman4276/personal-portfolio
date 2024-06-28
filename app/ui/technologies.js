@@ -22,14 +22,14 @@ const Technologies = () => {
     "/typescript.png",
     "/reactnative.png",
     "/electron.png",
-    "/vue.png",
-    "/angular.png",
+    // "/vue.png",
+    // "/angular.png",
     "/firebase.png",
     "/psql.png",
     "/mysql.png",
     "/next.png",
     "/aws.png",
-    "/apache.png",
+    // "/apache.png",
     "/nginx.png",
   ];
 
