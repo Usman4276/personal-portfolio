@@ -64,7 +64,7 @@ const Technologies = () => {
               return (
                 <Image
                   key={index}
-                  className="bg-white p-2 rounded-lg"
+                  className="bg-white p-2 rounded-lg hover:scale-[1.1] hover:transition"
                   borderRadius="full"
                   width={80}
                   height={80}

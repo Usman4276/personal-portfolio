@@ -47,7 +47,11 @@ const Services = () => {
         <div className="text-center flex flex-wrap justify-center gap-6 mt-20 max-w-[1320px]">
           {cards.map((val) => {
             return (
-              <Card key={val.id} maxW="sm" className="animate-fade">
+              <Card
+                key={val.id}
+                maxW="sm"
+                className="animate-fade hover:scale-[1.03] hover:transition"
+              >
                 <CardBody className="flex flex-col items-center justify-center">
                   <Image src={val.img} width={200} height={200} alt="img" />
                   <CardHeader>
