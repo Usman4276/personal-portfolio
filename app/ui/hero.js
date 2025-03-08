@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import Typewriter from "typewriter-effect";
 import { Button } from "@chakra-ui/react";
@@ -8,8 +8,28 @@ import { Context } from "@/app/provider";
 const Hero = () => {
   const { setContextState } = useContext(Context);
 
+  useEffect(() => {
+    import("particles.js").then((particles) => {
+      if (typeof window !== "undefined" && window.particlesJS) {
+        window.particlesJS.load(
+          "hero-particles",
+          "/particles-config.json",
+          function () {
+            console.log("Particles.js config loaded.");
+          }
+        );
+      }
+    });
+  }, []);
   return (
-    <div className="h-screen bg-[#f5df4e] flex flex-col justify-between items-center">
+    <div className="relative h-screen bg-[#f5df4e] flex flex-col justify-between items-center">
+      {/* Particles Container */}
+      <div
+        id="hero-particles"
+        className="absolute top-0 left-0 w-full h-full"
+        style={{ zIndex: 0, pointerEvents: "none" }}
+      ></div>
+
       <div className="w-full max-w-[1320px] flex justify-center gap-2 w-full h-dvh items-center animate-fade">
         <div className="animate-fade-up flex flex-col items-center md:items-start gap-6 w-full px-5">
           {/* Heading text */}
