@@ -54,7 +54,7 @@ const Technologies = () => {
             size={"lg"}
             className="border-b-4 border-[#f5df4e] inline-block !font-medium"
           >
-            Technologies
+            Technologies I Work With
           </Heading>
         </div>
 

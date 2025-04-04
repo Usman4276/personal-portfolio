@@ -1,70 +1,49 @@
-import { SiExpress, SiTypescript } from "react-icons/si";
-import { DiMongodb } from "react-icons/di";
-import { FaReact, FaNode } from "react-icons/fa";
+import { SiCloudinary } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
+import { IoLogoLinkedin } from "react-icons/io";
+import { FaGithub, FaStackOverflow } from "react-icons/fa";
 
+// Social media links
+export const socialLinks = [
+  {
+    id: 1,
+    name: "Linkedin",
+    icon: <IoLogoLinkedin size={"30px"} color="white" />,
+    url: "https://www.linkedin.com/in/usmanmustafa01/",
+  },
+  {
+    id: 2,
+    name: "Github",
+    icon: <FaGithub size={"30px"} color="white" />,
+    url: "https://github.com/Usman4276",
+  },
+  {
+    id: 3,
+    name: "Stackoverflow",
+    icon: <FaStackOverflow size={"30px"} color="white" />,
+    url: "https://stackoverflow.com/users/9480107/muhammad-usman",
+  },
+];
 // Projects data
 export const projectList = [
   {
     id: 1,
-    title: "Project 1",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eos modi ullam illo id rem beatae accusamus, reprehenderit alias quo similique, culpa libero eligendi? Laborum hic tempora libero veniam possimus.",
-    img: "/p1.jpg",
+    title: "Luxury Signage",
+    desc: "This custom-built website is designed for a local business specializing in high-impact visual solutions, including outdoor signage, digital displays, indoor signs, and bespoke LED neon designs. The platform provides an easy-to-use interface that allows the business owner to manage their portfolio effortlessly—uploading, organizing, and removing images within categorized galleries. This ensures their services and completed projects are always showcased in a professional and visually engaging way.",
+    img: "/luxury_signage_thumbnail.png",
     tools: [
-      <FaReact size={30} />,
-      <FaNode size={30} />,
-      <SiExpress size={30} />,
-      <DiMongodb size={30} />,
+      {
+        name: "Next JS",
+        icon: <RiNextjsFill size={30} />,
+      },
+      {
+        name: "Cloudinary",
+        icon: <SiCloudinary size={30} />,
+      },
     ],
+
     animate: "fade-up",
-    url: "",
-    github: "",
-  },
-  {
-    id: 2,
-    title: "Project 2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eos modi ullam illo id rem beatae accusamus, reprehenderit alias quo similique, culpa libero eligendi? Laborum hic tempora libero veniam possimus.",
-    img: "/p2.jpg",
-    tools: [
-      <FaReact size={30} />,
-      <FaNode size={30} />,
-      <SiExpress size={30} />,
-      <DiMongodb size={30} />,
-      <SiTypescript size={30} />,
-    ],
-    animate: "fade-up",
-    url: "",
-    github: "",
-  },
-  {
-    id: 3,
-    title: "Project 3",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eos modi ullam illo id rem beatae accusamus, reprehenderit alias quo similique, culpa libero eligendi? Laborum hic tempora libero veniam possimus.",
-    img: "/p3.jpg",
-    tools: [
-      <FaReact size={30} />,
-      <FaNode size={30} />,
-      <SiExpress size={30} />,
-      <DiMongodb size={30} />,
-      <SiTypescript size={30} />,
-    ],
-    animate: "fade-up",
-    url: "",
-    github: "",
-  },
-  {
-    id: 4,
-    title: "Project 4",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eos modi ullam illo id rem beatae accusamus, reprehenderit alias quo similique, culpa libero eligendi? Laborum hic tempora libero veniam possimus.",
-    img: "/p4.jpg",
-    tools: [
-      <FaReact size={30} />,
-      <FaNode size={30} />,
-      <SiExpress size={30} />,
-      <DiMongodb size={30} />,
-      <SiTypescript size={30} />,
-    ],
-    animate: "fade-up",
-    url: "",
+    url: "https://luxurysignage.vercel.app/",
     github: "",
   },
 ];

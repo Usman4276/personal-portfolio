@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import Typewriter from "typewriter-effect";
-import { Button } from "@chakra-ui/react";
+import { Button, Tooltip } from "@chakra-ui/react";
 import Image from "next/image";
 import { Context } from "@/app/provider";
+import { socialLinks } from "../utils/constants";
 
 const Hero = () => {
   const { setContextState } = useContext(Context);
@@ -74,6 +75,16 @@ const Hero = () => {
             >
               Contact Me
             </Button>
+          </div>
+          {/* Social Icons */}
+          <div className="flex gap-[1rem] bg-[#000000] rounded-full p-2 mt-6">
+            {socialLinks.map((link) => (
+              <Tooltip key={link.id} label={link.name}>
+                <a href={link.url} target="_blank">
+                  {link.icon}
+                </a>
+              </Tooltip>
+            ))}
           </div>
         </div>
 

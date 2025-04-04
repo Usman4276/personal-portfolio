@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { Context } from "@/app/provider";
 import CountUp, { useCountUp } from "react-countup";
-import { Heading, Text, Button } from "@chakra-ui/react";
+import { Heading, Text, Button, Tooltip } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { TbWorldWww } from "react-icons/tb";
-import { FaGithub } from "react-icons/fa";
 import { projectList } from "../utils/constants";
 
 const Projects = () => {
@@ -123,7 +122,7 @@ const Projects = () => {
                       Visit Site
                     </Button>
                   </Link>
-                  <Link href={val.github} target="_blank">
+                  {/* <Link href={val.github} target="_blank">
                     <Button
                       variant={"solid"}
                       bg={"black"}
@@ -134,7 +133,7 @@ const Projects = () => {
                     >
                       Github
                     </Button>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
               <div className="text-justify w-[68%] max-[1317px]:w-full pl-20 max-[1317px]:pl-0 max-[1317px]:pl-0 py-2 max-[848px]:mt-10">
@@ -144,9 +143,14 @@ const Projects = () => {
                 <div className="py-6">
                   <Text fontSize={"lg"}>{val.desc}</Text>
                 </div>
-                <div className="flex gap-6 flex-wrap">
+                <div className="flex gap-6 flex-wrap items-center">
+                  <div className="font-bold">Build with :</div>
                   {val.tools.map((val, index) => {
-                    return <div key={index}>{val}</div>;
+                    return (
+                      <Tooltip label={val.name}>
+                        <div key={index}>{val.icon}</div>
+                      </Tooltip>
+                    );
                   })}
                 </div>
               </div>
